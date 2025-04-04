@@ -23,7 +23,7 @@ Think of MCP as a **universal USB-C port for AI**: a standardized way to plug LL
 
 MCP follows a **client-server model**:
 
-- **MCP Hosts**: Apps like Claude Desktop, IDEs, or AI tools.
+- **MCP Hosts**: Apps like [Claude Desktop](https://www.anthropic.com/claude-desktop), IDEs, or AI tools.
 - **MCP Clients**: Protocol connectors managing server connections.
 - **MCP Servers**: Lightweight programs exposing data and tools.
 - **Local Data Sources**: Files, databases, services on your machine.
@@ -55,27 +55,46 @@ Host (Claude, IDEs)
 
 ### Servers
 
-- **Official**: GitHub, GitLab, Google Drive, Slack, PostgreSQL, SQLite, Memory, Puppeteer, Brave Search, Google Maps, AWS KB, Fetch, Sentry, etc.
+- **Official**:
+  - [GitHub MCP](https://github.com/modelcontextprotocol/server-github)
+  - [GitLab MCP](https://github.com/modelcontextprotocol/server-gitlab)
+  - [Google Drive MCP](https://github.com/modelcontextprotocol/server-googledrive)
+  - [Slack MCP](https://github.com/modelcontextprotocol/server-slack)
+  - [PostgreSQL MCP](https://github.com/modelcontextprotocol/server-postgresql)
+  - [SQLite MCP](https://github.com/modelcontextprotocol/server-sqlite)
+  - [Memory MCP](https://github.com/modelcontextprotocol/server-memory)
+  - [Puppeteer MCP](https://github.com/modelcontextprotocol/server-puppeteer)
+  - [Brave Search MCP](https://github.com/modelcontextprotocol/server-bravesearch)
+  - [Google Maps MCP](https://github.com/modelcontextprotocol/server-googlemaps)
+  - [AWS KB MCP](https://github.com/modelcontextprotocol/server-awskb)
+  - [Fetch MCP](https://github.com/modelcontextprotocol/server-fetch)
+  - [Sentry MCP](https://github.com/modelcontextprotocol/server-sentry)
 - **Community**: Cloudflare, Raygun, Kagi, Exa.ai, YouTube, AppleScript, Make, VSCode Devtools, Node.js Debugger, OpenAI, Phabricator, Obsidian, ZenML, Blender, WhatsApp, Firebase, Raindrop.io, Neovim, Xero, GraphQL, Windows CLI, and many more.
 
 ### SDKs
 
-- **Official**: Python, TypeScript, Java, Kotlin, C#
-- **Community**: Rust (WIP), Go (WIP)
+- **Official**:
+  - [Python SDK](https://github.com/modelcontextprotocol/python-sdk)
+  - [TypeScript SDK](https://github.com/modelcontextprotocol/typescript-sdk)
+  - [Java SDK](https://github.com/modelcontextprotocol/java-sdk)
+  - [Kotlin SDK](https://github.com/modelcontextprotocol/kotlin-sdk)
+  - [C# SDK](https://github.com/modelcontextprotocol/csharp-sdk)
+- **Community**:
+  - Rust (WIP)
+  - Go (WIP)
 
 ### Tools
 
-- Server Inspector (visual testing)
+- [Server Inspector](https://github.com/modelcontextprotocol/inspector) (visual testing)
 - CLI managers
 - Installers
-- Agent frameworks
-- LangChain integration
+- Agent frameworks (e.g., [LangChain integration](https://python.langchain.com/docs/integrations/mcp))
 - Desktop marketplaces
 
 ### Clients
 
-- Claude Desktop
-- n8n workflows
+- [Claude Desktop](https://www.anthropic.com/claude-desktop)
+- [n8n workflows](https://n8n.io)
 - Custom apps
 
 ---
