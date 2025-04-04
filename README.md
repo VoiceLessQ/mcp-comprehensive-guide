@@ -135,6 +135,102 @@ Host (Claude, IDEs)
 
 ---
 
+## Installing MCP Servers on Windows 10
+
+### Overview
+
+MCP servers are lightweight programs that expose data and tools to your AI environment. Here's how to install and configure them on Windows 10 using the example servers in this project.
+
+### Step 1: Open Command Prompt
+
+Press `Win + R`, type `cmd`, and press Enter.
+
+### Step 2: Navigate to the MCP server directory
+
+For example, to navigate to the `fetch-mcp` server:
+
+```
+cd C:\Users\<YourUser>\Documents\Cline\MCP\fetch-mcp
+```
+
+Replace `<YourUser>` with your Windows username.
+
+### Step 3: Install dependencies
+
+Run:
+
+```
+npm install
+```
+
+### Step 4: Build the server
+
+Run:
+
+```
+npm run build
+```
+
+### Step 5: Configure MCP settings
+
+Edit the MCP settings file located at:
+
+```
+C:\Users\<YourUser>\AppData\Roaming\Code\User\globalStorage\saoudrizwan.claude-dev\settings\cline_mcp_settings.json
+```
+
+**Important:**  
+- **Never commit real API keys, secrets, or sensitive data to version control.**  
+- Use placeholders or environment variables, and keep secrets private.  
+- Example below uses dummy placeholders.
+
+Add an entry for the server. Example for `fetch-mcp`:
+
+```json
+{
+  "mcpServers": {
+    "fetch-mcp": {
+      "command": "node",
+      "args": ["C:/Users/<YourUser>/Documents/Cline/MCP/fetch-mcp/dist/index.js"],
+      "env": {
+        "API_KEY": "YOUR_API_KEY_HERE"
+      }
+    },
+    "github-mcp": {
+      "command": "node",
+      "args": ["C:/Users/<YourUser>/Documents/Cline/MCP/github-mcp/dist/index.js"],
+      "env": {
+        "GITHUB_TOKEN": "YOUR_GITHUB_TOKEN_HERE"
+      }
+    },
+    "sequentialthinking-mcp": {
+      "command": "node",
+      "args": ["C:/Users/<YourUser>/Documents/Cline/MCP/sequentialthinking-mcp/dist/index.js"],
+      "env": {}
+    }
+  }
+}
+```
+
+Make sure to replace `<YourUser>` with your username and adjust paths if needed.  
+Replace `"YOUR_API_KEY_HERE"` and `"YOUR_GITHUB_TOKEN_HERE"` with your actual secrets, but **do not share or commit them publicly**.
+
+### Step 6: Restart your AI tool or IDE
+
+This will load the new MCP servers.
+
+### Notes
+
+- You can add environment variables under `"env"` if needed (e.g., API keys).
+- MCP servers communicate over stdio by default.
+- You can run servers manually with:
+
+```
+node dist/index.js
+```
+
+---
+
 ## Summary
 
 MCP is a **powerful, open, and extensible protocol** that connects LLMs to the real world. It has a **rich ecosystem**, clear architecture, and is **rapidly evolving** with community support.
